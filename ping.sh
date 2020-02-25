@@ -1,5 +1,5 @@
 #!/bin/bash
-LOGFILE="/home/denis/result_of_ping"
+#LOGFILE="/home/denis/result_of_ping"
 IPS='10.19.0.1' # Здесь можешь перечислить список IP адресов каждый ip с новой строчки или через пробел!
 
 function zerg_ping (){
