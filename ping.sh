@@ -29,7 +29,7 @@ for IP_ADDRESS in ${IPS}; do
    read -p 'Pausing for 5 seconds' -t 5
    echo \n
    echo "Runing OpenVPN."
-   openvpn --config /home/user/.ovpn/VPNConfig.ovpn &
+   openvpn --config /home/user/.ovpn/VPNConfig.ovpn & # Здесь пишем полный пуить до config.ovpn
    fi
 
 done
