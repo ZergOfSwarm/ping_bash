@@ -1,7 +1,7 @@
 #!/bin/bash
 #LOGFILE="/home/denis/result_of_ping" # Раскомментировать если нужно вести log.file
-IPS='10.19.0.1' # Здесь можешь перечислить список "IP" адресов каждый "ip" с новой строчки или через пробел!
-mqtt_server='192.168.18.12' # Здесь пропишем "IP" адрес "MQTT" сервера.
+IPS='192.168.3.1' # "IP" адресов который пингуем.
+mqtt_server='192.168.3.12' # Здесь пропишем "IP" адрес "MQTT" сервера.
 
 function zerg_ping (){ # Функция "zerg_ping" которая пингует и результат пишет либо в лог.файл или отправляет на MQTT.
 for IP_ADDRESS in ${IPS}; do
@@ -29,7 +29,7 @@ for IP_ADDRESS in ${IPS}; do
    read -p 'Pausing for 5 seconds' -t 5
    echo \n
    echo "Runing OpenVPN."
-   openvpn --config /home/denis/.ovpn/Synology/VPNConfig.ovpn &
+   openvpn --config /home/user/.ovpn/VPNConfig.ovpn &
    fi
 
 done
