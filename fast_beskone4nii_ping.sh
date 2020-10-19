@@ -9,6 +9,7 @@ while [ 1 ]
     TIME=`date +%s`
     if [ $online -eq 0 ] && [ $flag -eq 0 ]; then
         #echo "WiFi есть!"
+        echo "'Попытка подключения в' `date +%H:%M:%S_%d-%m-%Y_%Z` 1 $(($TIME-$TIMESTAMP))" | tee -a log_of_connection.txt
         flag=2
         #echo "Устанавливаю Flag = " $flag
     elif [ $online -eq 0 ] && [ $flag -eq 2 ];
